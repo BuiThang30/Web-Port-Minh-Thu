@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Compass - Final Reports</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="results.css"> 
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <!-- Đổi thẻ logo trỏ về /home -->
+            <a href="/home" class="logo-link" id="homeLink">ESG COMPASS</a>
+            <div class="nav-links">
+                <span>|</span>
+                <a href="/about">About</a>
+                <span>|</span>
+                <a href="/help">Help</a>
+                <span>|</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="banner">
+            <h1>FINAL REPORTS</h1>
+        </div>
+
+        <div class="reports-top-grid">
+            <div class="card result-card">
+                <h2>ENERGY AND CARBON</h2>
+                <div class="card-divider"></div>
+                
+                <div class="figures-grid">
+                    <div class="figure-col">
+                        <h3>ELECTRICITY CONSUMPTION</h3>
+                        <p class="figure-value" id="resConsumption">0</p>
+                    </div>
+                    <div class="figure-col">
+                        <h3>ELECTRIC CO2E</h3>
+                        <p class="figure-value" id="resElectricCo2">0</p>
+                    </div>
+                    <div class="figure-col">
+                        <h3>ESTIMATED TOTAL CO2E</h3>
+                        <p class="figure-value" id="resTotalCo2">0</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="emissionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card result-card center-content">
+                <h2 class="text-center">GREEN TRANSITION</h2>
+                
+                <h1 class="status-ready text-center" id="resReadiness">PARTIALLY READY</h1>
+                
+                <div class="status-details">
+                    <p id="resStrengths">Strengths: (Show existing green practices)</p>
+                    <br>
+                    <p id="resGaps">Areas For Improvement: Missing Practices or information</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card result-card mt-25">
+            <h2>RECOMMENDATION</h2>
+            <div class="card-divider"></div>
+            
+            <div class="recommendation-box">
+                <p>Electricity Efficiency Improvement</p>
+            </div>
+            
+            <div class="recommendation-box mt-15">
+                <p>Fuel Switching</p>
+            </div>
+        </div>
+
+        <button class="btn-send mt-25" id="btnSend">SEND</button>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>

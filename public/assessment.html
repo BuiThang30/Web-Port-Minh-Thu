@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Compass - Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assessment.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <!-- Đã đổi thẻ logo trỏ về /home -->
+            <a href="/home" class="logo-link" id="homeLink">ESG COMPASS</a>
+            <div class="nav-links">
+                <span>|</span>
+                <a href="/about">About</a>
+                <span>|</span>
+                <a href="/help">Help</a>
+                <span>|</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="banner">
+            <h1>ASSESSMENT</h1>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" id="tabCompany">COMPANY</div>
+            <div class="tab inactive" id="tabActivity">ACTIVITY</div>
+        </div>
+
+        <div class="cards-grid" id="sectionCompany">
+            <div class="card">
+                <h2 class="single-line">INDUSTRY</h2>
+                <div class="card-divider"></div>
+                <div class="input-group">
+                    <select id="companyInd1" class="form-control">
+                        <option value="garment">Garment / Wearing Apparel Manufacturing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="multi-line">NUMBER<br>OF EMPLOYEES</h2>
+                <div class="card-divider"></div>
+                <div class="input-group">
+                    <input type="text" id="companyEmp" class="form-control" placeholder="Your company number">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="single-line">INDUSTRY</h2>
+                <div class="card-divider"></div>
+                <div class="input-group">
+                    <select id="companyInd2" class="form-control">
+                        <option value="north">Region</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid d-none" id="sectionActivity">
+            <div class="card">
+                <h2 class="multi-line">MONTHLY ELECTRICITY<br>CONSUMPTION</h2>
+                <div class="card-divider"></div>
+                <div class="input-group">
+                    <input type="text" id="activityCons" class="form-control" placeholder="Enter kWh">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="multi-line">ELECTRICITY COST<br>OPTIONAL</h2>
+                <div class="card-divider"></div>
+                <div class="input-group">
+                    <input type="text" id="activityCost" class="form-control" placeholder="Enter VND">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2 class="single-line">POWER OUTAGES</h2>
+                <div class="card-divider"></div>
+                <div class="input-group radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="powerOutage" value="yes" class="form-control">
+                        <span class="custom-radio"></span> Yes
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="powerOutage" value="no" class="form-control">
+                        <span class="custom-radio"></span> No
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-continue" id="btnContinue" disabled>CONTINUE</button>
+    </div>
+    <script src="assessment.js"></script>
+</body>
+</html>

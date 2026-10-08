@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+
+@font-face {
+    font-family: "1FTV Avilock";
+    src: url("fonts/1FTV-Avilock-Bold.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary-blue: #365FF4; 
+    --bg-color: #ffffff;
+    --font-heading: "1FTV Avilock", sans-serif;
+    --font-text: "Actor", sans-serif;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: var(--primary-blue); 
+    width: 100%; 
+    overflow-x: hidden; 
+}
+
+.d-none { 
+    display: none !important; 
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
+header { 
+    background-color: var(--primary-blue); 
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 999; 
+}
+
+.header-content { 
+    max-width: 1440px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 25px 80px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo-link { 
+    color: #FFF; 
+    font-family: var(--font-heading); 
+    font-size: 48px; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+}
+
+.nav-links { 
+    display: flex; 
+    align-items: center; 
+}
+
+.nav-links span { 
+    margin: 0px; 
+    color: rgba(255, 255, 255, 0.6); 
+    font-size: 36px; 
+}
+
+.nav-links a { 
+    color: #FFF; 
+    font-family: var(--font-text); 
+    font-size: 36px; 
+    font-weight: 400; 
+    text-decoration: none; 
+    padding: 0 10px; 
+    margin: 0 30px; 
+}
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+.container { 
+    max-width: 1440px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 140px 80px 60px 80px; 
+}
+
+.banner { 
+    background-color: var(--primary-blue); 
+    width: 100%; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-bottom: 30px; 
+}
+
+.banner h1 { 
+    color: #FFF; 
+    font-family: var(--font-heading); 
+    font-size: 64px; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    line-height: 1; 
+}
+
+/* =========================================
+   TABS
+   ========================================= */
+.tabs { 
+    display: flex; 
+    width: 100%; 
+    margin-bottom: 40px; 
+}
+
+.tab { 
+    flex: 1; 
+    text-align: center; 
+    font-family: var(--font-heading); 
+    font-size: 48px; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    padding: 20px 0; 
+    line-height: 1; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+}
+
+.tab.active { 
+    background-color: var(--primary-blue); 
+    color: #FFF; 
+    border: 3px solid var(--primary-blue); 
+}
+
+.tab.inactive { 
+    background-color: #FFF; 
+    color: var(--primary-blue); 
+    border: 3px solid var(--primary-blue); 
+}
+
+.tab.inactive:hover { 
+    background-color: #eef2ff; 
+}
+
+#tabCompany.inactive { 
+    border-right: none; 
+}
+
+#tabActivity.active { 
+    border-left: 3px solid var(--primary-blue); 
+}
+
+/* =========================================
+   CARDS GRID & CONTENT
+   ========================================= */
+.cards-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    margin-bottom: 40px; 
+}
+
+.card { 
+    background-color: var(--primary-blue); 
+    padding: 40px 30px; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 420px; 
+    border: 2px solid transparent; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background-color 0.3s; 
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.card.active-card { 
+    border: 2px solid #FFF; 
+    background-color: #3b66ff; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
+}
+
+.card h2 { 
+    color: #FFF; 
+    font-family: var(--font-heading); 
+    font-style: normal; 
+    font-weight: 400; 
+    line-height: normal; 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
+    min-height: 90px; 
+}
+
+.card h2.single-line { 
+    font-size: 60px; 
+}
+
+.card h2.multi-line { 
+    font-size: 38px; 
+}
+
+.card-divider { 
+    height: 3px; 
+    background-color: #FFF; 
+    width: 100%; 
+    margin-bottom: 30px; 
+}
+
+/* =========================================
+   FORM INPUTS
+   ========================================= */
+.input-group { 
+    width: 100%; 
+}
+
+.card input[type="text"], 
+.card select { 
+    width: 100%; 
+    background-color: transparent; 
+    border: 1px solid #FFF; 
+    border-radius: 6px; 
+    color: #FFF; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px; 
+    text-transform: none; 
+    font-weight: 400; 
+    padding: 15px 45px 15px 15px; 
+    outline: none; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    height: 90px; 
+}
+
+.card input:focus, 
+.card select:focus { 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.card input::placeholder { 
+    color: #FFF; 
+    opacity: 0.8; 
+    font-size: 22px; 
+} 
+
+.card select { 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpolygon points='7,10 17,10 12,15'/%3E%3C/svg%3E"); 
+    background-repeat: no-repeat; 
+    background-position: right 0px center; 
+    background-size: 50px; 
+    white-space: normal; 
+    word-wrap: break-word; 
+}
+
+.card select option { 
+    background-color: var(--primary-blue); 
+    color: #FFF; 
+    padding: 10px; 
+    font-size: 16px; 
+}
+
+.radio-group { 
+    display: flex; 
+    gap: 40px; 
+    margin-top: 10px; 
+}
+
+.radio-label { 
+    display: flex; 
+    align-items: center; 
+    color: #FFF; 
+    font-family: var(--font-text); 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
+.radio-label input { 
+    display: none; 
+}
+
+.custom-radio { 
+    width: 20px; 
+    height: 20px; 
+    border: 2px solid #FFF; 
+    border-radius: 50%; 
+    margin-right: 15px; 
+    display: inline-block; 
+    position: relative; 
+}
+
+.radio-label input:checked + .custom-radio::after { 
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 10px; 
+    height: 10px; 
+    background-color: #FFF; 
+    border-radius: 50%; 
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn-continue { 
+    width: 100%; 
+    background-color: var(--primary-blue); 
+    color: #FFF; 
+    font-family: var(--font-heading); 
+    font-size: 56px; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    border: none; 
+    padding: 20px 0; 
+    cursor: pointer; 
+    line-height: 1; 
+    transition: background-color 0.3s ease, opacity 0.3s ease; 
+}
+
+.btn-continue:hover:not(:disabled) { 
+    background-color: #2747c4; 
+}
+
+.btn-continue:disabled { 
+    background-color: #a0a0a0; 
+    opacity: 0.6; 
+    cursor: not-allowed; 
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================= */
+
+/* Dưới 1439px: Giảm margin, padding */
+@media (max-width: 1439px) {
+    .header-content, .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .logo-link { font-size: 42px; }
+    .banner h1 { font-size: 56px; }
+    .tab { font-size: 40px; }
+    .card h2.single-line { font-size: 50px; }
+    .card h2.multi-line { font-size: 32px; }
+}
+
+/* Dưới 1200px: Bắt đầu thu nhỏ component, chuyển Grid 3 cột thành 2 cột cho các thẻ card */
+@media (max-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo-link { font-size: 36px; }
+    .nav-links a { font-size: 28px; margin: 0 15px; }
+    .nav-links span { font-size: 28px; }
+    .banner h1 { font-size: 48px; }
+    .tab { font-size: 32px; }
+    .btn-continue { font-size: 48px; }
+}
+
+/* Dưới 1024px (Tablet dọc & ngang): Header xếp chồng */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .container {
+        padding-top: 180px; /* Cần đẩy xuống sâu hơn do header cao hơn */
+    }
+    .banner h1 { font-size: 40px; }
+    .tab { font-size: 28px; }
+    .card { min-height: 380px; }
+    .card h2.single-line { font-size: 42px; }
+    .card h2.multi-line { font-size: 28px; }
+    .btn-continue { font-size: 40px; }
+}
+
+/* Dưới 768px (Điện thoại): Card Grid thành 1 cột */
+@media (max-width: 768px) {
+    .header-content, .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr; /* 1 Cột */
+    }
+    .tabs {
+        flex-direction: column;
+    }
+    .tab {
+        border: 3px solid var(--primary-blue) !important;
+        margin-bottom: 10px;
+    }
+    .tab.active { border-color: var(--primary-blue); }
+    .banner h1 { font-size: 32px; }
+    .card { min-height: auto; padding: 30px 20px; }
+    .btn-continue { font-size: 32px; padding: 15px 0; }
+    .radio-group { flex-direction: column; gap: 15px; }
+}
+
+/* Dưới 480px (Màn hình điện thoại nhỏ) */
+@media (max-width: 480px) {
+    .logo-link { font-size: 28px; }
+    .nav-links a { font-size: 20px; margin: 0 10px; }
+    .nav-links span { font-size: 20px; }
+    .banner h1 { font-size: 28px; }
+    .tab { font-size: 24px; padding: 15px 0; }
+    .card h2.single-line { font-size: 36px; min-height: 60px; }
+    .card h2.multi-line { font-size: 24px; min-height: 60px; }
+    .card input[type="text"], .card select { height: 70px; font-size: 18px; }
+    .btn-continue { font-size: 28px; }
+}
